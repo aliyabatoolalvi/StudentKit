@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="need_tools_">
+    <item name="android:textSize">45sp</item>
+    <item name="android:textColor">#E9F1F7</item>
+
+</style></resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <TextView
+        android:id="@+id/need_tools_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/montserrat_light_italic"
+        android:text="@string/need_tools_"
+        android:textAppearance="@style/need_tools_"
+        android:textColor="@color/lightBlue"
+        android:textSize="40sp"
+android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="match_parent"
+
+        android:layout_height="566dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/rectanglew"
+        android:elevation="1dp" />
+
+    <View
+        android:id="@+id/logotrans"
+        android:layout_width="240dp"
+        android:layout_height="440dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/logo_trans"
+        android:elevation="1dp" />
+
+
+    <!-- drawable/rectangle_1.xml -->
+    <!--android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    -->
+    <TextView
+        android:id="@+id/slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="581dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_medium"
+
+        android:text="Slide to login"
+        android:textColor="@color/darkBlue"
+        android:textSize="26sp" />
+    <View
+        android:id="@+id/advance"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentgra="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="225dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="610dp"
+        android:background="@drawable/advance"
+        />
+
+
+
+</RelativeLayout>
