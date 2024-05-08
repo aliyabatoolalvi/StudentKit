@@ -10,5 +10,7 @@
     <color name="lightBlue">#E9F1F7</color>
     <color name="darkBlue">#2274A5</color>
     <color name="camel">#E7DFC6</color>
+    <color name="yes">#289900</color>
+
 
 </resources>
