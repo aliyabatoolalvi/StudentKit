@@ -5,13 +5,13 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/mycard"
         android:layout_width="202dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         app:cardBackgroundColor="@color/camel"
         android:foregroundGravity="center"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 <LinearLayout
@@ -23,31 +23,33 @@
     >
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="179dp"
-        android:layout_height="137dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/camera"
-
-        />
-
-    <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Camera DSLR"
-        android:textColor="@color/black"
-        android:gravity="start"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/camera"
+        android:adjustViewBounds="true"
+
 
         />
 
-  <!-- <View
+    <!-- <View
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:background="#289900"
 
         /> -->
-<LinearLayout
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Camera DSLR"
+        android:textColor="@color/black"
+
+        />
+
+    <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -56,6 +58,7 @@
 
     >
 <View
+    android:id="@+id/statuscircle"
     android:layout_width="10dp"
     android:layout_height="10dp"
     android:background="@drawable/circle"
