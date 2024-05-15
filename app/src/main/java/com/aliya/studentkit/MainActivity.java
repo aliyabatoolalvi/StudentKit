@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
         LinearLayoutManager manager=new LinearLayoutManager(this);
-        manager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        manager.setOrientation(LinearLayoutManager.VERTICAL);
         binding.recycler.setLayoutManager(manager);
         binding.recycler.setAdapter(adapter);
         try {
-            // Attempt to fetch data from local database
+            //  to fetch data from local database
             List<Item> Items = AppDatabase.getDatabase(this).productDao().getAll();
             // If local database data is available, display it
             if (Items != null && !Items.isEmpty()) {
@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Connection successful", Toast.LENGTH_SHORT).show();
 
                         AppDatabase.getDatabase(MainActivity.this).productDao().deleteAll();
+                        AppDatabase.getDatabase(MainActivity.this).productDao().insertOrReplaceAll(Items);
+
                         refresh();
                     } else {
                         Log.e("API Response", "Error: " + response.code() + " " + response.message());
@@ -80,5 +82,4 @@ public class MainActivity extends AppCompatActivity {
         data.addAll(AppDatabase.getDatabase(this).productDao().getAll());
         adapter.notifyDataSetChanged();
     }
-
 }

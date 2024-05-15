@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aliya.studentkit.R;
@@ -14,20 +13,17 @@ import com.aliya.studentkit.R;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
     public TextView title;
-    public ImageView itemimg;
-    public TextView avalibility;
-    public TextView details;
+    public ImageView img;
+    public TextView availability;
     public TextView price;
 
     public CardView post;
     public ProductViewHolder(@NonNull View itemView) {
         super(itemView);
-
+        price=itemView.findViewById(R.id.price);
         post=itemView.findViewById(R.id.mycard);
         title=itemView.findViewById(R.id.title);
-        itemimg= itemView.findViewById(R.id.img);
-        avalibility=itemView.findViewById(R.id.status) ;
-
-
+        img= itemView.findViewById(R.id.img);
+        availability =itemView.findViewById(R.id.status) ;
     }
 }

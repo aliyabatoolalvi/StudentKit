@@ -3,7 +3,7 @@
     <style name="Theme.StudentKit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/lightBlue</item>
-        <item name="colorPrimaryVariant">@color/darkBlue</item>
+        <item name="colorPrimaryVariant">@color/camel</item>
         <item name="colorOnPrimary">@color/darkBlue</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

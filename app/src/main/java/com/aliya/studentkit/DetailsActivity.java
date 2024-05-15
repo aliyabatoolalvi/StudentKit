@@ -8,12 +8,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class DetailsActivity extends AppCompatActivity {
+import com.aliya.studentkit.databinding.ActivityDetailsBinding;
+import com.aliya.studentkit.databinding.ActivityMainBinding;
 
+public class DetailsActivity extends AppCompatActivity {
+ActivityDetailsBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding = ActivityDetailsBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
-
+        setContentView(binding.getRoot());
+        binding.back.setOnClickListener(v->{
+            super.onBackPressed();
+        });
     }
 }

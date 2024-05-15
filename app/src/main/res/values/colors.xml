@@ -11,6 +11,7 @@
     <color name="darkBlue">#2274A5</color>
     <color name="camel">#E7DFC6</color>
     <color name="yes">#289900</color>
+    <color name="no">#990000</color>
 
 
 </resources>

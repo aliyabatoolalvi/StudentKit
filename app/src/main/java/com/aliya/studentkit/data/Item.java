@@ -14,8 +14,6 @@ public class Item {
     public String price;
     public String img;
 
-    public Item() {
-    }
 
     public Item(int id, String title, String details, String category, String status, String price, String img) {
         this.id = id;

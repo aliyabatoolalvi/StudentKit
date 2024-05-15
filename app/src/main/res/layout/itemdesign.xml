@@ -7,14 +7,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/mycard"
         android:layout_width="202dp"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         app:cardBackgroundColor="@color/camel"
         android:foregroundGravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -57,21 +57,21 @@
     android:gravity="center"
 
     >
-<View
+<!--<View
     android:id="@+id/statuscircle"
     android:layout_width="10dp"
     android:layout_height="10dp"
     android:background="@drawable/circle"
 
-    />
+    /> -->
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Available"
         android:textColor="@color/yes"
         android:gravity="end"
         android:layout_gravity="end"
+        android:text="@{model.text.capitalize()}"
         />
 </LinearLayout>
 

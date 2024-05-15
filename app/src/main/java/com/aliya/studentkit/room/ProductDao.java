@@ -21,6 +21,9 @@ public interface ProductDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insertOrReplace(Item item);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertOrReplaceAll(List<Item> listitem);
+
     @Delete
     void delete(Item item);
 
