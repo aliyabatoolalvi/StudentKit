@@ -78,14 +78,10 @@ android:layout_centerHorizontal="true"
         android:id="@+id/advance"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_alignParentgra="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="225dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="610dp"
-        android:background="@drawable/advance"
-        />
+        android:background="@drawable/advance" />
 
 
 
