@@ -21,5 +21,6 @@ ActivityDetailsBinding binding;
         binding.back.setOnClickListener(v->{
             super.onBackPressed();
         });
+
     }
 }
