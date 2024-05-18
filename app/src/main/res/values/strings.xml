@@ -2,5 +2,6 @@
     <string name="app_name">Student kit</string>
     <string name="need_tools_">Need tools right now?\nLogin with your reg id right now!
 </string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

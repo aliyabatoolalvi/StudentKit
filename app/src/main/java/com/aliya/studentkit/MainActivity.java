@@ -15,6 +15,9 @@ import com.aliya.studentkit.databinding.ActivityMainBinding;
 import com.aliya.studentkit.retrofit.APIClient;
 import com.aliya.studentkit.retrofit.APIInterface;
 import com.aliya.studentkit.room.AppDatabase;
+import com.onesignal.Continue;
+import com.onesignal.OneSignal;
+import com.onesignal.debug.LogLevel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     List<Item> data = new ArrayList<>();
     ProductAdapter adapter = new ProductAdapter(this,data);
 
-    private static final String ONESIGNAL_APP_ID = "########-####-####-####-############";
+    private static final String ONESIGNAL_APP_ID = "5821b1b4-1dd5-47ca-9aac-f42ea4ffbf5b";
 
 
     @Override
@@ -40,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         binding.recycler.setLayoutManager(manager);
         binding.recycler.setAdapter(adapter);
+        OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
+
+        // requestPermission will show the native Android notification permission prompt.
+        // NOTE: It's recommended to use a OneSignal In-App Message to prompt instead.
+        OneSignal.getNotifications().requestPermission(false, Continue.none());
+
         try {
             //  to fetch data from local database
             List<Item> Items = AppDatabase.getDatabase(this).productDao().getAll();
