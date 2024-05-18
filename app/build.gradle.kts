@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
+//    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -50,6 +52,13 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
     // picasso
     implementation("com.squareup.picasso:picasso:2.8")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-inappmessaging-display")
+
+    implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

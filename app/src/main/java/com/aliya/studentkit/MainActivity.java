@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     List<Item> data = new ArrayList<>();
     ProductAdapter adapter = new ProductAdapter(this,data);
 
+    private static final String ONESIGNAL_APP_ID = "########-####-####-####-############";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityMainBinding.inflate(getLayoutInflater());

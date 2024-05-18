@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "42945337150",
+    "project_id": "student-kit-a3be4",
+    "storage_bucket": "student-kit-a3be4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42945337150:android:b5e30c6e534abfa4da7e6f",
+        "android_client_info": {
+          "package_name": "com.aliya.studentkit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgiFrm_-tW8C_lRH9eL0RozNQtsbLdytI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
