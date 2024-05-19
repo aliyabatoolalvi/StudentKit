@@ -18,8 +18,8 @@ import com.squareup.picasso.Picasso;
 public class DetailsActivity extends AppCompatActivity {
     ActivityDetailsBinding binding;
     Item item;
-    Context context = this;
-    ProductAdapter adapter;
+//    Context context = this;
+//    ProductAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityDetailsBinding.inflate(getLayoutInflater());

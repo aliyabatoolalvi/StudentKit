@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     List<Item> data = new ArrayList<>();
     ProductAdapter adapter = new ProductAdapter(this,data);
 
-    private static final String ONESIGNAL_APP_ID = "5821b1b4-1dd5-47ca-9aac-f42ea4ffbf5b";
 
 
     @Override
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
 
         // OneSignal Initialization
-        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
+//        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
 
         // requestPermission will show the native Android notification permission prompt.
         // NOTE: It's recommended to use a OneSignal In-App Message to prompt instead.
