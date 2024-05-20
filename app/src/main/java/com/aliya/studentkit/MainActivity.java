@@ -1,5 +1,6 @@
 package com.aliya.studentkit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     List<Item> data = new ArrayList<>();
     ProductAdapter adapter = new ProductAdapter(this,data);
 
+    private static final String ONESIGNAL_APP_ID = "5821b1b4-1dd5-47ca-9aac-f42ea4ffbf5b";
 
 
     @Override
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
 
         // OneSignal Initialization
-//        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
+        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
 
         // requestPermission will show the native Android notification permission prompt.
         // NOTE: It's recommended to use a OneSignal In-App Message to prompt instead.
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MainActivity", "Error: " + e.getMessage(), e);
             Toast.makeText(MainActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
+
     }
     void refresh() {
         data.clear();
@@ -97,3 +101,39 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 }
+
+// explicit
+// open app with package name of whatsapp or your app
+// implicit
+// when user want to see privacy policy where it goes to url, we can use it by intent action
+// Intent intent=new Intent(Intent.ACTION_VIEW);
+//intent.setData(URI.parse("https.example.com"));
+//show all the activities where its allowable
+// used for send message , share text or image , to call dialer, send email with data to where recipient and subject and text are pre-written
+
+//need conversion
+//for call with no
+// Intent intent=new Intent(Intent.ACTION_CALL);
+//intent.setData(URI.parse("tel:+922458732"));
+//
+//send specific message on whatsapp
+//String message = "Hello, this is a test message";
+//String encodedMessage = Uri.encode(message);
+//String url = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+
+// custom dialog box , design xml file
+// when click on button xml is called with dialog
+
+// public static void showDifference(Context context, String oldOne, String newOne) {
+//
+//        LayoutChangesBinding binding = LayoutChangesBinding
+//                .inflate(LayoutInflater.from(context));
+//
+//        binding.newV.setText(newOne);
+//        binding.oldV.setText(oldOne);
+//        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//        builder.setView(binding.getRoot());
+//        AlertDialog dialog = builder.show();
+//        binding.cancel.setOnClickListener(view -> dialog.dismiss());
+//
+//    }
