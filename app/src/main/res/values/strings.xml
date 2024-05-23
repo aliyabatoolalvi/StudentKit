@@ -3,5 +3,12 @@
     <string name="need_tools_">Need tools right now?\nLogin with your reg id right now!
 </string>
     <string name="title_activity_maps">MapsActivity</string>
-
+    <string-array name="categories">
+        <item>--Select category--</item>
+        <item>Study</item>
+        <item>Experiment</item>
+        <item>Journey</item>
+        <item>Hobby</item>
+        <item>EduFun</item>
+    </string-array>
 </resources>

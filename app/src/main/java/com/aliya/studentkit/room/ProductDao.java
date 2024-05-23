@@ -32,4 +32,7 @@ public interface ProductDao {
 
     @Query("DELETE FROM Item")
     void deleteAll();
+
+    @Query("SELECT distinct(category) FROM item")
+    List<String> getAllCats();
 }

@@ -38,5 +38,6 @@ public class DetailsActivity extends AppCompatActivity {
         Picasso.get().load("http://192.168.137.1/studentkit/images/" + item.getImg()).into(binding.img);
 
 
+
     }
 }

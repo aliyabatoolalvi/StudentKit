@@ -40,6 +40,7 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_5" />
 
@@ -49,7 +50,7 @@
         android:layout_height="210dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/homebg" />
@@ -61,18 +62,18 @@
         android:layout_marginTop="24dp"
         android:text="I'm looking for"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/calculator"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-
+        android:layout_height="35dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/mybutton"
         android:drawableLeft="@drawable/calculator"
-
         android:drawableTint="@color/darkBlue"
         android:gravity="center_vertical|center_horizontal"
         android:paddingStart="8dp"
@@ -82,17 +83,15 @@
         android:text="Calculator"
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="127dp" />
+        app:layout_constraintBottom_toTopOf="@+id/vr"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/camera"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-
+        android:layout_height="35dp"
         android:background="@drawable/mybutton"
-
-        android:drawableLeft="@drawable/calculator"
+        android:drawableLeft="@drawable/cameraicon"
         android:drawablePadding="55dp"
         android:drawableTint="@color/darkBlue"
         android:gravity="center_vertical|center_horizontal"
@@ -103,35 +102,37 @@
         android:text="Camera"
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="221dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/more"
+        app:layout_constraintEnd_toStartOf="@+id/more"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/more"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/more"
-        android:layout_width="45dp"
-        android:layout_height="29dp"
-
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/mybutton"
-
-
-        android:gravity="center_vertical|center_horizontal"
+        android:drawableLeft="@drawable/dots"
+        android:gravity="center"
         android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="..."
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="222dp" />
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/internet"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
 
         android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/calculator"
+        android:drawableLeft="@drawable/custom_wifi"
 
         android:drawablePadding="55dp"
         android:drawableTint="@color/darkBlue"
@@ -144,17 +145,19 @@
         android:text="Internet"
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="174dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/vr"
+        app:layout_constraintEnd_toStartOf="@+id/vr"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vr"
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/laptop"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-
+        android:layout_height="35dp"
         android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/calculator"
-
+        android:drawableLeft="@drawable/laptop"
         android:drawablePadding="55dp"
         android:drawableTint="@color/darkBlue"
         android:gravity="center_vertical|center_horizontal"
@@ -165,38 +168,56 @@
         android:text="Laptop"
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="127dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/calculator"
+        app:layout_constraintEnd_toStartOf="@+id/calculator"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calculator"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/vr"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
 
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="8dp"
+
         android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/calculator"
+        android:drawableLeft="@drawable/custom_book"
 
         android:drawablePadding="55dp"
         android:drawableTint="@color/darkBlue"
-
         android:gravity="center_vertical|center_horizontal"
         android:paddingStart="8dp"
         android:paddingTop="1dp"
         android:paddingEnd="8dp"
         android:paddingBottom="1dp"
-        android:text="VR"
+        android:text="Book"
         android:textAllCaps="false"
         android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="174dp" />
+        app:layout_constraintBottom_toTopOf="@+id/more"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/recycler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="452dp"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:backgroundTint="@color/lightBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
