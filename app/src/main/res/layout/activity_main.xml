@@ -8,15 +8,27 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home"
+        app:srcCompat="@drawable/homebg" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="39dp"
         android:layout_height="67dp"
-        android:layout_marginTop="4dp"
-        android:elevation="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logobar" />
-
     <View
         android:id="@+id/rectangle_5"
         android:layout_width="match_parent"
@@ -26,195 +38,206 @@
         android:background="#2274A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-
         android:fontFamily="@font/montserrat_medium"
         android:text="HOME"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_5" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="404dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/homebg" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
         android:text="I'm looking for"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home" />
+/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:elevation="1dp"
+        android:gravity="left"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@id/home">
 
-    <Button
-        android:id="@+id/calculator"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/calculator"
-        android:drawableTint="@color/darkBlue"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="Calculator"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        app:layout_constraintBottom_toTopOf="@+id/vr"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/camera"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/cameraicon"
-        android:drawablePadding="55dp"
-        android:drawableTint="@color/darkBlue"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="Camera"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/more"
-        app:layout_constraintEnd_toStartOf="@+id/more"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/more"
-        app:layout_constraintVertical_bias="1.0" />
+            <Button
+                android:id="@+id/calculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mybutton"
+                android:drawableLeft="@drawable/calculator"
+                android:drawableTint="@color/darkBlue"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="1dp"
+                android:text="Calculator"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue" />
 
-    <Button
-        android:id="@+id/more"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/dots"
-        android:gravity="center"
-        android:paddingStart="8dp"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/laptop"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mybutton"
+                android:drawableLeft="@drawable/laptop"
+                android:drawablePadding="55dp"
+                android:drawableTint="@color/darkBlue"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="1dp"
+                android:text="Laptop"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/internet"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginVertical="9dp"
+            android:gravity="center">
 
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/custom_wifi"
+            <Button
+                android:id="@+id/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/mybutton"
+                android:drawableLeft="@drawable/cameraicon"
+                android:drawablePadding="55dp"
+                android:drawableTint="@color/darkBlue"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="1dp"
+                android:text="Camera"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="225dp" />
 
-        android:drawablePadding="55dp"
-        android:drawableTint="@color/darkBlue"
+            <Button
+                android:id="@+id/internet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mybutton"
+                android:drawableLeft="@drawable/custom_wifi"
+                android:drawablePadding="55dp"
+                android:drawableTint="@color/darkBlue"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="1dp"
+                android:text="Internet"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="186dp" />
+        </LinearLayout>
 
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="Internet"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/vr"
-        app:layout_constraintEnd_toStartOf="@+id/vr"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/vr"
-        app:layout_constraintVertical_bias="0.142" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
 
-    <Button
-        android:id="@+id/laptop"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/laptop"
-        android:drawablePadding="55dp"
-        android:drawableTint="@color/darkBlue"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="Laptop"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/calculator"
-        app:layout_constraintEnd_toStartOf="@+id/calculator"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/calculator"
-        app:layout_constraintVertical_bias="0.0" />
+            >
 
-    <Button
-        android:id="@+id/vr"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+            <Button
+                android:id="@+id/book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/mybutton"
+                android:drawableLeft="@drawable/custom_book"
 
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="8dp"
+                android:drawablePadding="55dp"
+                android:drawableTint="@color/darkBlue"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="1dp"
+                android:text="Book"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="187dp" />
 
-        android:background="@drawable/mybutton"
-        android:drawableLeft="@drawable/custom_book"
+            <Button
+                android:id="@+id/more"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mybutton"
+                android:drawableRight="@drawable/dots"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="184dp"
+                tools:layout_editor_absoluteY="225dp" />
 
-        android:drawablePadding="55dp"
-        android:drawableTint="@color/darkBlue"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingStart="8dp"
-        android:paddingTop="1dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="1dp"
-        android:text="Book"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlue"
-        app:layout_constraintBottom_toTopOf="@+id/more"
-        app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/recycler"
         android:layout_width="231dp"
         android:layout_height="452dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:backgroundTint="@color/lightBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/lightBlue"
         android:clickable="true"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
