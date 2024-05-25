@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         // NOTE: It's recommended to use a OneSignal In-App Message to prompt instead.
         OneSignal.getNotifications().requestPermission(false, Continue.none());
 
+
+        binding.floatingActionButton.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, AddEditItemActivity.class);
+            startActivity(intent);
+
+        });
         try {
             //  to fetch data from local database
             List<Item> Items = AppDatabase.getDatabase(this).productDao().getAll();
