@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.aliya.studentkit.adapter.ProductAdapter;
 import com.aliya.studentkit.data.Item;
+import com.aliya.studentkit.data.User;
 import com.aliya.studentkit.databinding.ActivityMainBinding;
 import com.aliya.studentkit.retrofit.APIClient;
 import com.aliya.studentkit.retrofit.APIInterface;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ProductAdapter adapter = new ProductAdapter(this,data);
 
     private static final String ONESIGNAL_APP_ID = "5821b1b4-1dd5-47ca-9aac-f42ea4ffbf5b";
+    public static String session = "";
 
 
     @Override
@@ -57,8 +59,11 @@ public class MainActivity extends AppCompatActivity {
         binding.floatingActionButton.setOnClickListener(v->{
             Intent intent = new Intent(MainActivity.this, AddEditItemActivity.class);
             startActivity(intent);
-
         });
+
+        User user = AppDatabase.getDatabase(this).userDao().getUser();
+        session = user.getSession();
+        APIClient.retrofit = null;
         try {
             //  to fetch data from local database
             List<Item> Items = AppDatabase.getDatabase(this).productDao().getAll();

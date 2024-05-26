@@ -32,6 +32,12 @@ public class LoginActivity extends AppCompatActivity {
         binding=ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.register.setOnClickListener(v->{
+            Intent intent = new Intent(LoginActivity.this, SigninActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
         binding.login.setOnClickListener(v -> {
         //validate
             APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
