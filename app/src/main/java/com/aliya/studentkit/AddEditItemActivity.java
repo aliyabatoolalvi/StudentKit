@@ -63,7 +63,7 @@ public class AddEditItemActivity extends AppCompatActivity {
 //            Picasso.get().load(APIClient.BASE_URL_IMAGES + item.getImg()).placeholder(R.drawable.logo).into(binding.image);
             binding.productName.getEditText().setText(item.getTitle());
             binding.description.getEditText().setText(item.getDetails());
-            binding.price.getEditText().setText(item.getPrice()+"");
+            binding.price.getEditText().setText(item.getPrice()+" Rs/Day");
             String[] cats = getResources().getStringArray(R.array.categories);
             for (int i = 0; i < cats.length; i++) {
                 if (cats[i].equals(item.getCategory())) {

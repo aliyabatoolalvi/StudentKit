@@ -18,7 +18,8 @@
         android:visibility="visible"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homebg" />
+        android:src="@drawable/homebg"
+       />
 
         <ImageView
             android:id="@+id/logo"
@@ -28,7 +29,7 @@
             android:elevation="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logobar" />
+            android:src="@drawable/logo" />
         <View
             android:id="@+id/rectangle_5"
             android:layout_width="match_parent"
@@ -217,10 +218,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
-            android:layout_width="0dp"
-            android:layout_height="452dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:foregroundGravity="center"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

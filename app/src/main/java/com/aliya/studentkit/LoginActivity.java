@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         //validate
             APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
             Map<String, String> map = new HashMap<>();
-            map.put("phone", binding.name.getText().toString());
+            map.put("username", binding.name.getText().toString());
             Call<User> call1 = apiInterface.login(map, binding.password.getText().toString());
             call1.enqueue(new Callback<User>() {
 

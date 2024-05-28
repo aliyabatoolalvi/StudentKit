@@ -38,7 +38,7 @@ public class SigninActivity extends AppCompatActivity {
 
             map.put("email", "");
             map.put("phone", binding.phone.getText().toString());
-            map.put("reg", binding.reg.getText().toString());
+            map.put("reg_no", binding.reg.getText().toString());
             map.put("name", binding.name.getText().toString());
             Call<User> call1 = apiInterface.signUp(map, binding.password.getText().toString());
             call1.enqueue(new Callback<User>() {

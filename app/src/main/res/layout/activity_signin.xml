@@ -144,8 +144,10 @@
         android:layout_marginTop="56dp"
         android:background="@color/lightBlue"
         android:ems="10"
+
         android:hint="Enter password"
-        android:inputType="text"
+
+        android:inputType="textPassword"
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
