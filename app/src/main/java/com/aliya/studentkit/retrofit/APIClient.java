@@ -33,9 +33,7 @@ public class APIClient {
     public static Retrofit getClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        Interceptor authInterceptor= chain -> {
-            return chain.proceed(chain.request().newBuilder().addHeader("session", MainActivity.session).build());
-        };
+        Interceptor authInterceptor= chain -> chain.proceed(chain.request().newBuilder().addHeader("Session", MainActivity.session).build());
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(authInterceptor)
                 .addInterceptor(interceptor)

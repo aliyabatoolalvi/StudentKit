@@ -38,7 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         binding.title.setText(item.getTitle());
         binding.price.setText(item.getPrice()+" Rs/day");
         binding.details.setText(item.getDetails());
-        binding.price.setText(String.valueOf(item.getPrice()));
+//        binding.price.setText(String.valueOf(item.getPrice()));
         binding.status.setText(item.getStatus());
         Picasso.get().load("http://192.168.137.1/studentkit/images/" + item.getImg()).into(binding.img);
         binding.lendme.setOnClickListener(v->{
@@ -47,7 +47,7 @@ public class DetailsActivity extends AppCompatActivity {
             String productDetails = item.getDetails();
 
             // Create the message
-            String message = "Hello, I am interested in lending the following product:\n\n" +
+            String message1 = "Hello, I am interested in borrowing the following product:\n\n" +
                     "Product Name: " + productName + "\n" +
                     "Details: " + productDetails + "\n\n" +
                     "Please let me know the process.";
@@ -65,11 +65,28 @@ public class DetailsActivity extends AppCompatActivity {
 //                Log.e("WhatsAppInteraction", "No activity found to handle WhatsApp intent");
 //                Toast.makeText(this, "WhatsApp is not installed or no activity found to handle the intent", Toast.LENGTH_SHORT).show();
 //            }
+//            String message1 = "Hello, ";
+//            String encodedMessage = Uri.encode(message1);
+//            String url = "https://wa.me/" + "+923169125129" + "?text=" + encodedMessage;
+//            Intent sendIntent = new Intent();
+//            sendIntent.setAction(Intent.ACTION_SEND);
+////            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+//            sendIntent.setType("text/plain"); startActivity(sendIntent);
+
+//            String message1 = "Hello, I want to borrow this item: "+ item.getTitle() + " with " + item.getDetails() + " for days ___ ";
+            String encodedMessage = Uri.encode(message1);
+            String url = "https://wa.me/" + "+923169125129" + "?text=" + encodedMessage;
+
             Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-            sendIntent.setType("text/plain"); startActivity(sendIntent);
+            sendIntent.setAction(Intent.ACTION_VIEW);
+            sendIntent.setData(Uri.parse(url));
+            startActivity(sendIntent);
+
+            Intent thankYouIntent = new Intent(DetailsActivity.this, ThankyouActivity.class);
+            startActivity(thankYouIntent);
         });
+
+
 
     }
 }
