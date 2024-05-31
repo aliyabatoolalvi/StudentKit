@@ -63,7 +63,8 @@ public class AddEditItemActivity extends AppCompatActivity {
 //            Picasso.get().load(APIClient.BASE_URL_IMAGES + item.getImg()).placeholder(R.drawable.logo).into(binding.image);
             binding.productName.getEditText().setText(item.getTitle());
             binding.description.getEditText().setText(item.getDetails());
-            binding.price.getEditText().setText(item.getPrice()+" Rs/Day");
+            binding.price.getEditText().setText(item.getPrice());
+
             String[] cats = getResources().getStringArray(R.array.categories);
             for (int i = 0; i < cats.length; i++) {
                 if (cats[i].equals(item.getCategory())) {
@@ -147,15 +148,17 @@ public class AddEditItemActivity extends AppCompatActivity {
 
         item.setTitle(binding.productName.getEditText().getText().toString());
         item.setDetails(binding.description.getEditText().getText().toString());
-        item.setPrice(Integer.parseInt(binding.price.getEditText().getText().toString()));
-
+        item.setPrice(Integer.parseInt(String.valueOf(binding.price.getEditText().getText())));
+        item.setStatus("Available");
+        // Assign the selected category to the item object
+        String selectedCategory = binding.categorySpinner.getSelectedItem().toString();
+        item.setCategory(selectedCategory);
         if (!isForEdit) item.setId(-1);
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        Map<String, String> map = objectMapper
-                .convertValue(item, new TypeReference<Map<String, String>>() {});
+        Map<String, String> map = objectMapper.convertValue(item, new TypeReference<Map<String, String>>() {});
         Call<Item> call1 = apiInterface.saveOrUpdateProduct(map);
         call1.enqueue(new Callback<Item>() {
             @Override
