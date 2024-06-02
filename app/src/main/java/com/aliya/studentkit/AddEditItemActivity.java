@@ -167,6 +167,8 @@ public class AddEditItemActivity extends AppCompatActivity {
                 if (response.code() == 200) {
                     Item Item = response.body();
 
+
+
                     AppDatabase.getDatabase(AddEditItemActivity.this).productDao().insertOrReplace(Item);
                     Toast.makeText(AddEditItemActivity.this, "Data saved", Toast.LENGTH_SHORT).show();
                     finish();
