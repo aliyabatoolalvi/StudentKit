@@ -75,7 +75,8 @@ public class DetailsActivity extends AppCompatActivity {
 
 //            String message1 = "Hello, I want to borrow this item: "+ item.getTitle() + " with " + item.getDetails() + " for days ___ ";
             String encodedMessage = Uri.encode(message1);
-            String url = "https://wa.me/" + "+923169125129" + "?text=" + encodedMessage;
+            String phone="+923169125129";
+            String url = "https://wa.me/" + phone + "?text=" + encodedMessage;
 
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_VIEW);
