@@ -86,8 +86,5 @@ public class DetailsActivity extends AppCompatActivity {
             Intent thankYouIntent = new Intent(DetailsActivity.this, ThankyouActivity.class);
             startActivity(thankYouIntent);
         });
-
-
-
     }
 }
