@@ -3,6 +3,7 @@ plugins {
 //    id("com.android.application")
     id("com.google.gms.google-services")
     alias(libs.plugins.googleAndroidLibrariesMapsplatformSecretsGradlePlugin)
+    alias(libs.plugins.googleFirebaseCrashlytics)
 }
 
 android {
@@ -42,6 +43,7 @@ dependencies {
     //room sql database for persistence
     implementation("androidx.room:room-runtime:2.6.1")
     implementation(libs.play.services.maps)
+    implementation(libs.firebase.crashlytics)
     annotationProcessor("androidx.room:room-compiler:2.6.1")
 
 
