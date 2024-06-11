@@ -112,7 +112,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 }
-
+// question was asked that difference between implicit and explicit
+// and why retrofit is used?
 // explicit
 // open app with package name of whatsapp or your app
 // implicit
