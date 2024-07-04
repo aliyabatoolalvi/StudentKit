@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String ONESIGNAL_APP_ID = "5821b1b4-1dd5-47ca-9aac-f42ea4ffbf5b";
     public static String session = "";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityMainBinding.inflate(getLayoutInflater());

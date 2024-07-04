@@ -41,10 +41,10 @@ android {
 dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
     //room sql database for persistence
-    implementation("androidx.room:room-runtime:2.6.1")
     implementation(libs.play.services.maps)
     implementation(libs.firebase.crashlytics)
     annotationProcessor("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.6.1")
 
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
